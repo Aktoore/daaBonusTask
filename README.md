@@ -20,14 +20,14 @@ Java 8 or higher
 Git (optional, for cloning the repository)
 
 Run from Command Line
-# Clone the repository
+Clone the repository
 git clone <repository-url>
 cd <project-folder>
 
-# Compile
+Compile
 javac MSTEdgeRemoval.java
 
-# Run
+Run
 java MSTEdgeRemoval
 
 Run from an IDE
