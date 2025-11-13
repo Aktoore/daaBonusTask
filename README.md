@@ -36,30 +36,56 @@ Open the project in IntelliJ IDEA, Eclipse, or VS Code.
 Add MSTEdgeRemoval.java and run the main() method directly.
 
     ----Construction of Minimum Spanning Tree----   
+
 MST vertices:
+
 Total weight: 11
+
    ----Deleting Edge----  
+   
 Edge Deleted: (3 - 4, weight: 2)
-   ----Connected Components----  
+
+   ----Connected Components---- 
+   
 Components: 2
+
 Component 1: [0, 1, 2, 3]
+
 Component 2: [4, 5]
+
    ----Deleting Edge----  
+   
 Replacement edge found: (3 - 5, weight: 6)
+
 New MST
+
 Edges in the new MST:
+
     (1 - 2, weight: 1)
+    
     (1 - 3, weight: 2)
+    
     (0 - 2, weight: 3)
+    
     (4 - 5, weight: 3)
+    
     (3 - 5, weight: 6)
+    
 Total weight: 15
+
    ----Verification----  
+   
 Original MST weight:11
+
 Removed Edge: (3 - 4, weight: 2) (weight: 2)
+
 Added Edge: (3 - 5, weight: 6) (weight: 6)
+
 New MST weight: 15
+
 Weight difference: +4
+
+
 This output shows that the program correctly detects disconnected components after removing an edge and finds a valid replacement edge to reconnect the tree.
 The new MST has a total weight of 15, which is 4 units higher than the original — exactly matching the expected difference.
 
