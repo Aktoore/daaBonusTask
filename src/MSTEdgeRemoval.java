@@ -46,8 +46,8 @@ public class MSTEdgeRemoval {
             } else if (rank[rootX] > rank[rootY]) {
                 parent[rootY] = rootX;
             } else {
-                parent[rootX] = rootY;
-                rank[rootY]++;
+                parent[rootY] = rootX;
+                rank[rootX]++;
             }
             return true;
         }
@@ -170,7 +170,7 @@ public class MSTEdgeRemoval {
                 System.out.println("Replacement edge found: " + replacement);
 
                 List<Edge> newMST = new ArrayList<>(mstAfterRemoval);
-                newMST.remove(replacement);
+                newMST.add(replacement);
 
                 System.out.println("New MST");
                 System.out.println("Edges in the new MST:");
@@ -180,6 +180,13 @@ public class MSTEdgeRemoval {
                     newTotalWeight += edge.weight;
                 }
                 System.out.println("Total weight: " + newTotalWeight);
+
+                System.out.println("   ----Verification----  ");
+                System.out.println("Original MST weight:" + totalWeight);
+                System.out.println("Removed Edge: " + removedEdge + " (weight: " + removedEdge.weight + ")");
+                System.out.println("Added Edge: " + replacement + " (weight: " + replacement.weight + ")");
+                System.out.println("New MST weight: " + newTotalWeight);
+                System.out.println("Weight difference: +" + (newTotalWeight - totalWeight));
             } else {
                 System.out.println("No replacement found");
             }
